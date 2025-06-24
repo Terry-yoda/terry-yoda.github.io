@@ -43,15 +43,15 @@
         /* 表格樣式 */
         table.schedule {
             border-collapse: collapse; /* 合併邊框 */
-            width: 1000px; /* 固定表格寬度 */
+            width: 1100px; /* 固定表格寬度 */
             height: 600px; /* 固定表格高度 */
-            margin: 20px auto; /* 置中 */
+            margin: 30px auto; /* 置中 */
             font-family: Arial, sans-serif;
         }
 
         /* 表頭樣式 */
         table.schedule thead th {
-            background-color: #f39924;
+            background-color: #fcd198;
             color: rgb(0, 0, 0);
             padding: 10px;
             border: 2px solid #000000;
@@ -73,8 +73,10 @@
         table.schedule td {
             border: 2px solid #000000;
             text-align: center;
+            color: rgb(46, 46, 46);
+            font-size: 20px;
             font-weight: bold; /* 表格內容文字粗體 */
-            width: 150px; /* 固定單元格寬度 */
+            width: 100px; /* 固定單元格寬度 */
             height: 50px; /* 固定單元格高度 */
             overflow: hidden; /* 隱藏超出內容 */
             white-space: nowrap; /* 禁止文字換行 */
@@ -96,6 +98,7 @@
             <button id="myselfButton">自我介紹</button>
             <button id="contactButton">聯絡方式</button>
             <button id="planButton">計畫表</button>
+            <button id="progressButton">專題進度</button>
         </nav>
     </header>
     <script>
@@ -113,6 +116,9 @@
         }
         document.getElementById("planButton").onclick = function(){
             window.location.href = "plan.html";
+        }
+        document.getElementById("progressButton").onclick = function(){
+            window.location.href = "progress.html";
         }
 
     </script>

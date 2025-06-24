@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>專題進度</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+            color: rgb(255, 255, 255); /* 文字顏色為白色 */
+            padding: 20px; /* 增加內邊距 */
+            text-align: center; /* 文字置中 */
+            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
+        }
+
+        button {
+            background-color: #792c4a; /* 藍色 */
+            color: rgb(255, 255, 255); 
+            padding: 10px 20px; 
+            margin: 10px; 
+            border: none;
+            border-radius: 100px; 
+            cursor: pointer; 
+        }
+
+        /* 當滑鼠懸停於按鈕上時的效果 */
+        button:hover {
+            background-color: #78ce8c; /* 更深的藍色 */
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+            color: rgb(236, 236, 236);
+            text-shadow: 2px 2px 1px #000000, 0 0 2px #fff;
+        }
+        body {
+            background: url('./welcomeback.jpg') no-repeat center center fixed;
+            height: 100vh; /* 設置高度超過瀏覽器視窗 */
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+        }
+        footer {
+            padding: 10px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
+        }
+        /* 表格樣式 */
+        table.progress {
+            border-collapse: collapse; /* 合併邊框 */
+            width: 1000px; /* 固定表格寬度 */
+            height: 300px; /* 固定表格高度 */
+            margin: 20px auto; /* 置中 */
+            font-family: Arial, sans-serif;
+        }
+
+        /* 表頭樣式 */
+        table.progress thead th {
+            background-color: #ffb8b8;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border: 2px solid #000000;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold; /* 表頭文字粗體 */
+        }
+
+        /* 表格內容的奇偶行顏色 */
+        table.progress tbody tr:nth-child(odd) {
+            background-color: #ffc7a2a8;
+            font-size: 20px;
+        }
+
+        table.progress tbody tr:nth-child(even) {
+            background-color: #ffe4c4;
+            font-size: 20px;
+        }
+
+        /* 單元格樣式 */
+        table.progress td {
+            border: 2px solid #000000;
+            text-align: center;
+            font-weight: bold; /* 表格內容文字粗體 */
+            width: 150px; /* 固定單元格寬度 */
+            height: 50px; /* 固定單元格高度 */
+            overflow: hidden; /* 隱藏超出內容 */
+            white-space: nowrap; /* 禁止文字換行 */
+            text-overflow: ellipsis; /* 超出內容顯示省略號 */
+        }
+
+        /* 鼠標懸停效果 */
+        table.progress tbody tr:hover {
+            background-color: #d1f1e7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>目前專題進度</h1>
+        <nav>
+            <button id="indexButton" class="custom-botton">首頁</button>
+            <button id="timetableButton" class="custom-button">我的課表</button>
+            <button id="myselfButton" class="custom-button">自我介紹</button>
+            <button id="contactButton" class="custom-button">聯絡方式</button>
+            <button id="planButton" class="custom-button">計畫表</button>
+            <button id="progressButton" class="custom-button">專題進度</button>
+        </nav>
+        <script>
+            document.getElementById("timetableButton").onclick = function() {
+                window.location.href = "timetable.html";
+            };
+            document.getElementById("indexButton").onclick = function() {
+                window.location.href = "index.html";
+            };
+            document.getElementById("myselfButton").onclick = function() {
+                window.location.href = "myself.html";
+            };
+            document.getElementById("contactButton").onclick = function() {
+                window.location.href = "contact.html";
+            };
+            document.getElementById("planButton").onclick = function() {
+                window.location.href = "plan.html";
+            };
+            document.getElementById("progressButton").onclick = function() {
+                window.location.href = "progress.html";
+            };
+        </script>
+    </header>
+    <main>
+        <table class="progress">
+            <thead>
+                <tr>
+                    <th>進度內容</th>
+                    <th>進度</th>
+                    <th>目前該進度內容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>主題設定</td>
+                    <td>
+                        <div style="background:#eee; border-radius:8px; width:120px; height:16px; display:inline-block; vertical-align:middle; border:1px solid #aaa;">
+                            <div style="background:#001aff; width:1%; height:100%; border-radius:8px;"></div>
+                        </div>
+                        <span style="margin-left:8px;">1%</span>
+                    </td>
+                    <td>無</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <div style="background:#eee; border-radius:8px; width:120px; height:16px; display:inline-block; vertical-align:middle; border:1px solid #aaa;">
+                            <div style="background:#001aff; width:1%; height:100%; border-radius:8px;"></div>
+                        </div>
+                        <span style="margin-left:8px;">1%</span>
+                    </td>
+                    <td>無</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <div style="background:#eee; border-radius:8px; width:120px; height:16px; display:inline-block; vertical-align:middle; border:1px solid #aaa;">
+                            <div style="background:#001aff; width:1%; height:100%; border-radius:8px;"></div>
+                        </div>
+                        <span style="margin-left:8px;">1%</span>
+                    </td>
+                    <td>無</td>
+                </tr>
+                <!-- 可以根據需要添加更多行 -->
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
