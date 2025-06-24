@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的課表</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('./welcomeback.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            color: rgb(255, 255, 255); /* 文字顏色為白色 */
+            padding: 20px; /* 增加內邊距 */
+            text-align: center; /* 文字置中 */
+            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
+        }
+
+        nav {
+            text-align: center; /* 將按鈕置中 */
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #792c4a; 
+            color: rgb(255, 255, 255); 
+            padding: 10px 20px; 
+            margin: 10px; 
+            border: none;
+            border-radius: 100px; 
+            cursor: pointer; 
+        }
+    
+        /* 當滑鼠懸停於按鈕上時的效果 */
+        button:hover {
+            background-color: #78ce8c; /* 更深的藍色 */
+        }
+
+        /* 表格樣式 */
+        table.schedule {
+            border-collapse: collapse; /* 合併邊框 */
+            width: 1000px; /* 固定表格寬度 */
+            height: 600px; /* 固定表格高度 */
+            margin: 20px auto; /* 置中 */
+            font-family: Arial, sans-serif;
+        }
+
+        /* 表頭樣式 */
+        table.schedule thead th {
+            background-color: #f39924;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: 2px solid #000000;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold; /* 表頭文字粗體 */
+        }
+
+        /* 表格內容的奇偶行顏色 */
+        table.schedule tbody tr:nth-child(odd) {
+            background-color: #ffc7a2a8;
+        }
+
+        table.schedule tbody tr:nth-child(even) {
+            background-color: #fae1c4;
+        }
+
+        /* 單元格樣式 */
+        table.schedule td {
+            border: 2px solid #000000;
+            text-align: center;
+            font-weight: bold; /* 表格內容文字粗體 */
+            width: 150px; /* 固定單元格寬度 */
+            height: 50px; /* 固定單元格高度 */
+            overflow: hidden; /* 隱藏超出內容 */
+            white-space: nowrap; /* 禁止文字換行 */
+            text-overflow: ellipsis; /* 超出內容顯示省略號 */
+        }
+
+        /* 鼠標懸停效果 */
+        table.schedule tbody tr:hover {
+            background-color: #d1f1e7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的課表</h1>
+        <nav>
+            <button id="indexButton">首頁</button>
+            <button id="timetableButton">我的課表</button>
+            <button id="myselfButton">自我介紹</button>
+            <button id="contactButton">聯絡方式</button>
+            <button id="planButton">計畫表</button>
+        </nav>
+    </header>
+    <script>
+        document.getElementById("indexButton").onclick = function(){
+            window.location.href = "index.html";
+        }
+        document.getElementById("timetableButton").onclick = function(){
+            window.location.href = "timetable.html";
+        }
+        document.getElementById("myselfButton").onclick = function(){
+            window.location.href = "myself.html";
+        }
+        document.getElementById("contactButton").onclick = function(){
+            window.location.href = "contact.html";
+        }
+        document.getElementById("planButton").onclick = function(){
+            window.location.href = "plan.html";
+        }
+
+    </script>
+    <table class="schedule">
+        <thead>
+            <tr>
+                <th>時間</th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8:10 - 9:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9:10 - 10:00</td>
+                <td>資訊安全概論</td>
+                <td></td>
+                <td>系統程式</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:20 - 11:10</td>
+                <td>資訊安全概論</td>
+                <td></td>
+                <td>系統程式</td>
+                <td></td>
+                <td>經濟學</td>
+            </tr>
+            <tr>
+                <td>11:20 - 12:10</td>
+                <td>資訊安全概論</td>
+                <td></td>
+                <td>系統程式</td>
+                <td></td>
+                <td>經濟學</td>
+            </tr>
+            <tr>
+                <td>12:20 - 13:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13:10 - 14:00</td>
+                <td></td>
+                <td>高爾夫 體育</td>
+                <td></td>
+                <td>資料結構</td>
+                <td>程式設計檢定</td>
+            </tr>
+            <tr>
+                <td>14:10 - 15:00</td>
+                <td>計算機網路</td>
+                <td>高爾夫 體育</td>
+                <td>自然通識</td>
+                <td>資料結構</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15:20 - 16:10</td>
+                <td>計算機網路</td>
+                <td>數據分析資料工程</td>
+                <td>自然通識</td>
+                <td>資料結構</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16:20 - 17:10</td>
+                <td>計算機網路</td>
+                <td>數據分析資料工程</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17:20 - 18:10</td>
+                <td></td>
+                <td>數據分析資料工程</td>
+                <td>大數據分析程式設計</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18:20 - 19:10</td>
+                <td></td>
+                <td></td>
+                <td>大數據分析程式設計</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <p>© 2025 江侑達</p>
+    </footer>
+</body>
+</html>
