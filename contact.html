@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫方式</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+             background: url('./welcomeback.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #792c4a; 
+            color: rgb(255, 255, 255); 
+            padding: 10px 20px; 
+            margin: 10px; 
+            border: none;
+            border-radius: 100px; 
+            cursor: pointer; 
+        }
+
+        button:hover {
+            background-color: #78ce8c;
+        }
+
+        main {
+            padding: 50px;
+            text-align: center;
+            color: #f9ffab;
+            text-shadow: 3px 3px 6px #000, 0 0 1px #fff;
+        }
+
+        footer {
+            padding: 50px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>聯絡方式</h1>
+        <nav>
+            <button id="indexButton">首頁</button>
+            <button id="timetableButton">我的課表</button>
+            <button id="myselfButton">自我介紹</button>
+            <button id="contactButton">聯絡方式</button>
+            <button id="planButton">計畫表</button>
+        </nav>
+    </header>
+    <main>
+        <h2 style="font-size:35px;">歡迎聯絡我</h2>
+        <p style="font-size:20px;">電子郵件：jiangyoda@gmail.com</p>
+        <p style="font-size:20px;">手機：0921 973 755</p>
+        <div>
+            <h3>社群連結:</h3>
+            <a href="https://www.facebook.com/jiang.you.da.128865" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.instagram.com/terry_yoda/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+            <a target="_blank" rel="noopener noreferrer">LINE ID: terry91001</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 江侑達</p>
+    </footer>
+    <style>
+        a {
+            color: #fff896;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #00f83a;
+        }
+    </style>
+    <script>
+        document.getElementById("indexButton").onclick = function() {
+            window.location.href = "index.html";
+        };
+        document.getElementById("timetableButton").onclick = function() {
+            window.location.href = "timetable.html";
+        };
+        document.getElementById("myselfButton").onclick = function() {
+            window.location.href = "myself.html";
+        };
+        document.getElementById("contactButton").onclick = function() {
+            window.location.href = "contact.html";
+        };
+        document.getElementById("planButton").onclick = function() {
+            window.location.href = "plan.html";
+        };
+    </script>
+</body>
+</html>
