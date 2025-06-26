@@ -3,93 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的首頁</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('./welcomeback.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        header {
-            padding: 20px;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-        nav button {
-            background-color: #792c4a;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 100px;
-            cursor: pointer;
-        }
-        nav button:hover {
-            background-color: #78ce8c;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-        img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 8%;
-            margin-bottom: 10px;
-        }
-        footer {
-            padding: 10px;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-    </style>
+    <title>Terry-yoda's 網頁</title>
+    <link rel="icon" href="/web.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>東海大學資工系2A / S12350133 / 江侑達</h1>
+        <h1>東海大學資工系3A / S12350133 / 江侑達</h1>
         <nav>
             <button id="indexButton">首頁</button>
             <button id="timetableButton">我的課表</button>
             <button id="myselfButton">自我介紹</button>
             <button id="contactButton">聯絡方式</button>
-            <button id="planButton">計畫表</button>
+            <button id="planButton">網頁版本紀錄</button>
             <button id="progressButton">專題進度</button>
         </nav>
     </header>
     <main>
-        <h2>歡迎來到我的網站！</h2>
-        <img src="S__27050060.jpg" alt="個人照片">
-        <p>這是我的網站首頁。</p>
+        <div class="main-content-box">
+            <h2>歡迎來到我的網站！</h2>
+            <h3 style="color:rgb(17, 180, 255);">目前為測試階段!!</h3>
+            <img src="S__27050060.jpg" alt="個人照片">
+            <p>這是我的網站首頁。</p>
+        </div>
     </main>
     <footer>
-        <p>© 2025 我的網站</p>
+        <p>版本: v0.1.1</p>
+        <p>© 2025 Jiangyoda</p>
     </footer>
-    <script>
-        // 導航按鈕
-        document.getElementById("indexButton").onclick = function() {
-            window.location.href = "index.html";
-        };
-        document.getElementById("timetableButton").onclick = function() {
-            window.location.href = "timetable.html";
-        };
-        document.getElementById("myselfButton").onclick = function() {
-            window.location.href = "myself.html";
-        };
-        document.getElementById("contactButton").onclick = function() {
-            window.location.href = "contact.html";
-        };
-        document.getElementById("planButton").onclick = function() {
-            window.location.href = "plan.html";
-        };
-        document.getElementById("progressButton").onclick = function() {
-            window.location.href = "progress.html";
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

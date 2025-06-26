@@ -1,102 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>計畫表</title>
-    <style>
-        header {
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-        button {
-            background-color: #792c4a;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 100px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #78ce8c;
-        }
-        body {
-            height: 100vh;
-            margin: 0;
-            background: url('./welcomeback.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-        footer {
-            padding: 10px;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-        /* 表格格式 */
-        table.plan-table {
-            width: 90%;
-            border-collapse: collapse;
-            margin: 0 auto;
-            border: 4px solid #78ce8c;
-        }
-        table.plan-table th, table.plan-table td {
-            border: 2px solid #78ce8c;
-            text-align: center;
-            font-size: 20px;
-            padding: 8px;
-        }
-        table.plan-table th {
-            font-size: 28px;
-            font-weight: bold;
-            background-color: rgba(120, 206, 140, 0.2);
-        }
-        table.plan-table td {
-            background-color: rgba(255,255,255,0.1);
-        }
-        table.plan-table tbody tr:hover {
-            background-color: #703535;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁版本紀錄 - Terry-yoda's 網頁</title>
+    <link rel="icon" href="/web.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>我的計劃</h1>
+        <h1>東海大學資工系3A / S12350133 / 江侑達</h1>
         <nav>
             <button id="indexButton">首頁</button>
             <button id="timetableButton">我的課表</button>
             <button id="myselfButton">自我介紹</button>
             <button id="contactButton">聯絡方式</button>
-            <button id="planButton">計畫表</button>
+            <button id="planButton">網頁版本紀錄</button>
             <button id="progressButton">專題進度</button>
         </nav>
-        <script>
-            document.getElementById("timetableButton").onclick = function() {
-                window.location.href = "timetable.html";
-            };
-            document.getElementById("indexButton").onclick = function() {
-                window.location.href = "index.html";
-            };
-            document.getElementById("myselfButton").onclick = function() {
-                window.location.href = "myself.html";
-            };
-            document.getElementById("contactButton").onclick = function() {
-                window.location.href = "contact.html";
-            };
-            document.getElementById("planButton").onclick = function() {
-                window.location.href = "plan.html";
-            };
-            document.getElementById("progressButton").onclick = function() {
-                window.location.href = "progress.html";
-            };
-        </script>
     </header>
-    <main style="display: flex; flex-direction: column; align-items: center;">
-        <section style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-            <p style="text-align: center; font-size: 30px; font-weight: bold;">計畫行程表</p>
+    <main>
+        <div class="main-content-box">
+            <h2 class="plan-intro-text">計畫行程表</h2>
             <table class="plan-table">
                 <thead>
                     <tr>
@@ -111,13 +36,13 @@
                         <td>2025/06/08</td>
                         <td>0.0.1</td>
                         <td>網頁雛形</td>
-                        <td style="color: rgb(52, 255, 52);">ok</td>
+                        <td class="status-ok">ok</td>
                     </tr>
                     <tr>
                         <td>2025/06/09</td>
                         <td>0.0.2</td>
                         <td>調整格式</td>
-                        <td style="color: rgb(52, 255, 52);">ok</td>
+                        <td class="status-ok">ok</td>
                     </tr>
                     <tr>
                         <td>2025/06/10</td>
@@ -151,12 +76,12 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
-        <p></p>
+            </div>
     </main>
     <footer>
-        <p style="text-align: center;">&copy; 2025 江侑達</p>
+        <p>版本: v0.1.1</p>
+        <p>© 2025 Jiangyoda</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
-

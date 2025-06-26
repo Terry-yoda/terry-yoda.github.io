@@ -1,95 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <title>自我介紹</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        header {
-            color: rgb(255, 255, 255); /* 文字顏色為白色 */
-            padding: 20px; /* 增加內邊距 */
-            text-align: center; /* 文字置中 */
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-
-        button {
-            background-color: #792c4a; /* 藍色 */
-            color: rgb(255, 255, 255); 
-            padding: 10px 20px; 
-            margin: 10px; 
-            border: none;
-            border-radius: 100px; 
-            cursor: pointer; 
-        }
-
-        /* 當滑鼠懸停於按鈕上時的效果 */
-        button:hover {
-            background-color: #78ce8c; /* 更深的藍色 */
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-        body {
-            background: url('./welcomeback.jpg') no-repeat center center fixed;
-            height: 100vh; /* 設置高度超過瀏覽器視窗 */
-            margin: 0;
-            padding: 0;
-            background-size: cover;
-        }
-        footer {
-            padding: 10px;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
-        }
-    </style>
+    <title>自我介紹 - Terry-yoda's 網頁</title>
+    <link rel="icon" href="/web.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>自我介紹</h1>
+        <h1>東海大學資工系3A / S12350133 / 江侑達</h1>
         <nav>
-            <button id="indexButton" class="custom-bottom">首頁</button>
-            <button id="timetableButton" class="custom-button">我的課表</button>
-            <button id="myselfButton" class="custom-button">自我介紹</button>
-            <button id="contactButton" class="custom-button">聯絡方式</button>
-            <button id="planButton" class="custom-button">計畫表</button>
-            <button id="progressButton" class="custom-button">專題進度</button>
+            <button id="indexButton">首頁</button>
+            <button id="timetableButton">我的課表</button>
+            <button id="myselfButton">自我介紹</button>
+            <button id="contactButton">聯絡方式</button>
+            <button id="planButton">網頁版本紀錄</button>
+            <button id="progressButton">專題進度</button>
         </nav>
-        <script>
-            document.getElementById("timetableButton").onclick = function() {
-                window.location.href = "timetable.html";
-            };
-            document.getElementById("indexButton").onclick = function() {
-                window.location.href = "index.html";
-            };
-            document.getElementById("myselfButton").onclick = function() {
-                window.location.href = "myself.html";
-            };
-            document.getElementById("contactButton").onclick = function() {
-                window.location.href = "contact.html";
-            };
-            document.getElementById("planButton").onclick = function() {
-                window.location.href = "plan.html";
-            };
-            document.getElementById("progressButton").onclick = function() {
-                window.location.href = "progress.html";
-            };
-        </script>
     </header>
     <main>
-        <section>
-            <h2 style="text-align: center;">你好，我是江侑達</h2>
-            <div style="display: flex; justify-content: center;">
-                <img src="S__27050060.jpg" alt="個人照片" style="width:180px; height:220px; object-fit:cover;">
+        <div class="main-content-box">
+            <h2>你好，我是江侑達</h2>
+            <div> <img src="S__27050060.jpg" alt="個人照片" class="myself-photo">
             </div>
-            <p style="text-align: center;">我是來自桃園大溪的大二生</p>
-        </section>
+            <p>我是來自桃園大溪的大二生</p>
+        </div>
     </main>
     <footer>
-        <p style="text-align: center;">© 2025 我的網站</p>
+        <p>版本: v0.1.1</p>
+        <p>© 2025 Jiangyoda</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
