@@ -1,0 +1,254 @@
+/* style.css - 整合與優化版 */
+
+/* --- 通用基礎樣式 --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('welcomeback.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex; /* 將 body 設置為 Flex 容器 */
+    flex-direction: column; /* 垂直排列子元素 */
+    min-height: 100vh; /* 讓 body 至少佔滿整個視窗高度 */
+    color: #fff; /* 統一文字顏色 */
+    text-shadow: 2px 3px 5px #000, 0 0 3px #fff; /* 統一文字陰影 */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
+}
+
+nav {
+    display: flex; /* 讓導航按鈕水平排列 */
+    justify-content: center; /* 讓按鈕在導航欄中居中 */
+    flex-wrap: wrap; /* 當空間不足時，按鈕可以換行 */
+    gap: 10px; /* 按鈕之間的間距 */
+}
+
+nav button {
+    background-color: #792c4a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 添加平滑過渡效果 */
+}
+
+nav button:hover {
+    background-color: #78ce8c;
+}
+
+main {
+    flex-grow: 1; /* 讓主要內容區塊佔據所有剩餘空間 */
+    padding: 20px;
+    display: flex; /* 再次設置為 Flex 容器，用於內容居中 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    text-align: center; /* 確保 main 內部文字居中，但會被 .main-content-box 覆蓋 */
+}
+
+.main-content-box { /* 所有頁面內容框的通用樣式 */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    padding: 32px 40px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    text-align: center; /* 確保內容居中 */
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px #000, 0 0 3px #fff;
+    /* 根據內容類型調整 display */
+    /* 如果內容是 flex 項目，可以設置為 block 或 flex */
+    /* 這裡使用 display: block; 並結合 margin: 0 auto; 確保其在 main 內部居中 */
+    display: block; 
+    margin: 0 auto; /* 在 main 內部居中 */
+    max-width: 90%; /* 限制內容框的最大寬度 */
+}
+
+/* 確保所有頁面主內容的文字顏色和陰影一致 */
+.main-content-box p,
+.main-content-box h2,
+.main-content-box h3 {
+    color: rgb(255, 255, 255); /* 統一主內容文字顏色 */
+    text-shadow: 1px 1px 2px #000, 0 0 3px #fff; /* 統一主內容文字陰影 */
+}
+
+img { /* 通用圖片樣式，可被特定 class 覆蓋 */
+    max-width: 300px;
+    height: auto;
+    border-radius: 8%;
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 3px 5px #000, 0 0 3px #fff;
+    margin-top: auto; /* 將 footer 推到底部 */
+}
+
+/* --- 頁面特定樣式 --- */
+
+/* myself.html 圖片樣式 */
+.myself-photo {
+    width: 180px;
+    height: 220px;
+    object-fit: cover; /* 確保圖片填充容器並裁剪多餘部分 */
+    border-radius: 8%; /* 保持圓角 */
+    margin-bottom: 10px; /* 保持下方間距 */
+}
+
+/* contact.html 聯絡方式頁面專屬的連結樣式 */
+.contact-links a {
+    color: #fff896; /* 連結原始顏色 */
+    text-decoration: underline;
+    transition: color 0.3s ease; /* 添加平滑過渡效果 */
+}
+
+.contact-links a:hover {
+    color: #00f83a; /* 連結滑鼠懸停顏色 */
+}
+
+.contact-info-h2 {
+    font-size: 35px;
+}
+
+.contact-info-p {
+    font-size: 20px;
+}
+
+/* plan.html 和 progress.html 表格的通用基礎樣式 */
+/* 避免重複定義 border-collapse, font-family 等 */
+table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255); /* 統一表格文字顏色 */
+    text-shadow: 1px 1px 2px #000, 0 0 3px #fff; /* 統一表格文字陰影 */
+    margin: 20px auto; /* 置中 */
+}
+
+table th, table td {
+    border: 2px solid #000000; /* 統一邊框顏色 */
+    text-align: center;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px; /* 固定單元格高度 */
+    overflow: hidden; /* 隱藏超出內容 */
+    white-space: nowrap; /* 禁止文字換行 */
+    text-overflow: ellipsis; /* 超出內容顯示省略號 */
+}
+
+table thead th {
+    background-color: #792c4a; /* 與按鈕顏色一致 */
+    color: rgb(255, 255, 255);
+    font-size: 28px; /* 表頭字體更大 */
+}
+
+/* plan.html 特定樣式 */
+table.plan-table {
+    width: 90%;
+    max-width: 900px; /* 限制表格最大寬度 */
+    border: 4px solid #78ce8c; /* 特定邊框顏色 */
+}
+
+table.plan-table th, table.plan-table td {
+    border: 2px solid #78ce8c; /* 特定邊框顏色 */
+}
+
+table.plan-table th {
+    background-color: rgba(120, 206, 140, 0.2); /* 表頭背景色 */
+}
+
+table.plan-table td {
+    background-color: rgba(255,255,255,0.1); /* 內容背景色 */
+}
+
+table.plan-table tbody tr:hover {
+    background-color: #703535; /* 懸停效果 */
+}
+
+.plan-intro-text { /* 特定於 plan.html 的段落樣式 */
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.status-ok { /* 調整特定表格儲存格的顏色 */
+    color: rgb(52, 255, 52); /* 綠色 */
+}
+
+/* progress.html 專題進度表格樣式 */
+table.progress-table {
+    width: 1000px;
+    max-width: 95%; /* 增加最大寬度限制 */
+}
+
+table.progress-table thead th {
+    background-color: #792c4a; /* 與按鈕顏色一致，更協調 */
+}
+
+table.progress-table tbody tr:nth-child(odd) {
+    background-color: rgba(121, 44, 74, 0.6); /* 使用按鈕的顏色變淡 */
+}
+
+table.progress-table tbody tr:nth-child(even) {
+    background-color: rgba(121, 44, 74, 0.4); /* 使用按鈕的顏色更淡 */
+}
+
+table.progress-table tbody tr:hover {
+    background-color: #78ce8c; /* 懸停時與按鈕懸停顏色一致 */
+    color: #000; /* 懸停時文字顏色可變深以提高對比 */
+}
+
+/* 進度條容器 */
+.progress-bar-container {
+    background: #eee;
+    border-radius: 8px;
+    width: 120px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #aaa;
+    overflow: hidden; /* 確保內部進度條不溢出 */
+}
+
+/* 進度條填充 */
+.progress-bar-fill {
+    background: #001aff; /* 藍色 */
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* 進度百分比文字 */
+.progress-percentage {
+    margin-left: 8px;
+    display: inline-block; /* 保持與進度條同行 */
+}
+
+/* timetable.html 課表表格樣式 */
+table.schedule-table {
+    width: 1100px;
+    max-width: 95%; /* 增加最大寬度限制 */
+}
+
+table.schedule-table thead th {
+    background-color: #792c4a; /* 與按鈕顏色一致 */
+}
+
+table.schedule-table tbody tr:nth-child(odd) {
+    background-color: rgba(121, 44, 74, 0.6); /* 與按鈕顏色相關聯的淡色 */
+}
+
+table.schedule-table tbody tr:nth-child(even) {
+    background-color: rgba(121, 44, 74, 0.4); /* 更淡的顏色 */
+}
+
+table.schedule-table tbody tr:hover {
+    background-color: #78ce8c; /* 與按鈕懸停顏色一致 */
+    color: #000; /* 懸停時文字顏色可變深以提高對比 */
+}
