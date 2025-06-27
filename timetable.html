@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>東海大學資工系3A / S12350133 / 江侑達</h1>
+        <h1>我的課表</h1>
         <nav>
             <button id="indexButton">首頁</button>
             <button id="timetableButton">我的課表</button>
@@ -21,8 +21,21 @@
     </header>
     <main>
         <div class="main-content-box">
-            <h2>我的課表</h2>
-            <table class="schedule-table">
+            <h3 style="color:rgb(17, 180, 255);">目前為測試階段!!</h3>
+            <div style="margin-bottom: 20px;">
+                <label for="semesterSelect" style="font-size: 24px; font-weight: bold; color: rgb(255, 255, 255); text-shadow: 1px 1px 2px #000;">目前課表學期：</label>
+                <select id="semesterSelect" style="padding: 8px 12px; font-size: 20px; border-radius: 8px; border: 2px solid #78ce8c; background-color: rgba(121, 44, 74, 0.8); color: #fff;">
+                    <option value="112-1">112學年第一學期(大一上)</option>
+                    <option value="112-2">112學年第二學期(大一下)</option>
+                    <option value="113-1">113學年第一學期(大二上)</option>
+                    <option value="113-2" selected>113學年第二學期(大二下)</option>
+                    <option value="114-1">114學年第一學期(大三上)</option>
+                    <option value="114-2">114學年第二學期(大三下)</option>
+                    <option value="115-1">115學年第一學期(大四上)</option>
+                    <option value="115-2">115學年第二學期(大四下)</option>
+                </select>
+            </div>
+            <table id="scheduleTable" class="schedule-table">
                 <thead>
                     <tr>
                         <th>時間</th>
@@ -34,100 +47,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>8:10 - 9:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>9:10 - 10:00</td>
-                        <td>資訊安全概論</td>
-                        <td></td>
-                        <td>系統程式</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>10:20 - 11:10</td>
-                        <td>資訊安全概論</td>
-                        <td></td>
-                        <td>系統程式</td>
-                        <td></td>
-                        <td>經濟學</td>
-                    </tr>
-                    <tr>
-                        <td>11:20 - 12:10</td>
-                        <td>資訊安全概論</td>
-                        <td></td>
-                        <td>系統程式</td>
-                        <td></td>
-                        <td>經濟學</td>
-                    </tr>
-                    <tr>
-                        <td>12:20 - 13:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>13:10 - 14:00</td>
-                        <td></td>
-                        <td>高爾夫 體育</td>
-                        <td></td>
-                        <td>資料結構</td>
-                        <td>程式設計檢定</td>
-                    </tr>
-                    <tr>
-                        <td>14:10 - 15:00</td>
-                        <td>計算機網路</td>
-                        <td>高爾夫 體育</td>
-                        <td>自然通識</td>
-                        <td>資料結構</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>15:20 - 16:10</td>
-                        <td>計算機網路</td>
-                        <td>數據分析資料工程</td>
-                        <td>自然通識</td>
-                        <td>資料結構</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>16:20 - 17:10</td>
-                        <td>計算機網路</td>
-                        <td>數據分析資料工程</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>17:20 - 18:10</td>
-                        <td></td>
-                        <td>數據分析資料工程</td>
-                        <td>大數據分析程式設計</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>18:20 - 19:10</td>
-                        <td></td>
-                        <td></td>
-                        <td>大數據分析程式設計</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
+                    </tbody>
             </table>
         </div>
     </main>
     <footer>
-        <p>版本: v0.1.1</p>
+        <p>版本: v0.1.2</p>
         <p>© 2025 Jiangyoda</p>
     </footer>
     <script src="script.js"></script>
