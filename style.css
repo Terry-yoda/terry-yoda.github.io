@@ -252,3 +252,28 @@ table.schedule-table tbody tr:hover {
     background-color: #78ce8c; /* 與按鈕懸停顏色一致 */
     color: #000; /* 懸停時文字顏色可變深以提高對比 */
 }
+
+.hobby-submenu {
+    /* 預設狀態：隱藏且高度為0，但保留空間以便動畫 */
+    display: block; /* 保持 block 讓 transition 能作用 */
+    max-height: 0; /* 初始高度為 0，視覺上隱藏 */
+    opacity: 0; /* 初始不透明度為 0，視覺上隱藏 */
+    overflow: hidden; /* 隱藏溢出內容，確保動畫平滑 */
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out; /* 添加平滑過渡效果 */
+
+    position: absolute;
+    top: 100%; /* 位於主選單項下方 */
+    left: 0; /* 與主選單項左側對齊 */
+    background-color: rgba(45, 45, 45, 0.95); /* 深色半透明背景 */
+    min-width: 100%; /* 子選單寬度與父級主選單項一致 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* 確保子選單在最上層 */
+    border-radius: 0 0 10px 10px; /* 底部圓角 */
+    padding-top: 5px; /* 調整內邊距 */
+}
+
+/* 當主選單項被點擊激活時，顯示子選單 */
+.hobby-menu-item.active .hobby-submenu {
+    max-height: 500px; /* 設置一個足夠大的值，讓內容完全顯示 */
+    opacity: 1; /* 完全顯示 */
+}

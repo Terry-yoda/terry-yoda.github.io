@@ -254,3 +254,40 @@ document.addEventListener('DOMContentLoaded', function() {
         renderSchedule(semesterSelect.value);
     }
 });
+
+// 獲取所有興趣主選單項
+    const hobbyMenuItems = document.querySelectorAll(".hobby-menu-item");
+
+    // 為每個主選單項添加點擊事件監聽器
+    hobbyMenuItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            // 阻止點擊事件冒泡到父元素，特別是當內部有連結時
+            event.stopPropagation();
+
+            // 檢查點擊的目標是否是連結本身
+            // 如果點擊的是連結，則讓連結正常跳轉，不觸發選單開合
+            if (event.target.tagName === 'A') {
+                return;
+            }
+
+            // 關閉所有其他已開啟的選單
+            hobbyMenuItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // 切換當前點擊項的 'active' 類別
+            this.classList.toggle('active');
+        });
+    });
+
+    // 點擊頁面其他地方時關閉所有選單
+    document.addEventListener('click', function(event) {
+        hobbyMenuItems.forEach(item => {
+            // 如果點擊的目標不在任何一個 hobby-menu-item 內部，則關閉該選單
+            if (!item.contains(event.target) && item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+        });
+    });
